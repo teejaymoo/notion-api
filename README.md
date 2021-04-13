@@ -30,14 +30,23 @@
 - Mongoose
 
 ### Catalog of Routes
-
+Queries
 Verb         |	URI Pattern
 ------------ | -------------
-GET | /blogposts
-GET | /blogposts/:id
-POST | /blogposts
-PATCH | /blogposts/:id
-DELETE | /blogposts/:id
+GET | /queries
+GET | /queries/:id
+POST | /queries
+PATCH | /queries/:id
+DELETE | /queries/:id
+
+
+Comment
+Verb         |	URI Pattern
+------------ | -------------
+GET | /queries/:id/comments
+POST | /queries/:id
+PATCH | /queries/:id
+DELETE | /queries/:id
 
 ### Unsolved Problems
 
