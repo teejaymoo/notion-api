@@ -7,8 +7,7 @@ const querySchema = new mongoose.Schema({
     required: true
   },
   body: {
-    type: String,
-    required: true
+    type: String
   },
   date: {
     type: Date,
