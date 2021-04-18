@@ -29,7 +29,7 @@ router.post('/queries', requireToken, (req, res, next) => {
   Query.create(queryData)
     // respond to succesful `create` with status 201 and JSON of new "example"
     .then(query => {
-      res.status(201).json({ query })
+      res.status(201).json({ query: query.toObject() })
     })
     // if an error occurs, pass it off to our error handler
     // the error handler needs the error message and the `res` object so that it
