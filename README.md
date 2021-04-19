@@ -62,6 +62,8 @@ DELETE | /queries/:id
 
 Add Chatroom Schema.
 
+Updating and Deleting comments!
+
 
 
 #### Wireframe:
