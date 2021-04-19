@@ -7,8 +7,9 @@ const passport = require('passport')
 const requireToken = passport.authenticate('bearer', { session: false })
 
 // Create comment
-router.post('/queries/:id', requireToken, (req, res, next) => {
+router.post('/queries/:id/comments', requireToken, (req, res, next) => {
   const commentData = req.body.comment
+  commentData.owner = req.user_id
   const queryId = req.params.id
   Query.findById(queryId)
     .then(handle404)
@@ -22,14 +23,11 @@ router.post('/queries/:id', requireToken, (req, res, next) => {
 
 // INDEX
 // GET
-router.get('/queries/:id/comments', (req, res, next) => {
+router.get('/queries/:id/index-comments', (req, res, next) => {
   const queryId = req.params.id
   Query.findById(queryId)
-    .then(queries => {
-      return queries.map(query => query.comment.toObject())
-    })
     // respond with status 200 and JSON of the queries
-    .then(queries => res.status(200).json({ queries: queries }))
+    .then(query => res.status(200).json({ comments: query.comments.toObject() }))
     // if an error occurs, pass it to the handler
 
     .catch(next)

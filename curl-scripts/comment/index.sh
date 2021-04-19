@@ -1,10 +1,7 @@
-#!/bin/sh
+#!/bin/
 
-API="http://localhost:4741"
-URL_PATH="/queries/:id/comments"
-
-curl "${API}${URL_PATH}" \
+curl "http://localhost:4741/queries/${ID}/index-comments" \
   --include \
-  --request GET
+  --request GET \
 
 echo
