@@ -6,7 +6,7 @@ The notion API will be our backend that connects Hello query to our database.
 
 
 ## Important Links
-- [Other Repo](https://github.com/teejaymoo/HelloQuery-client)
+- [Client Repo](https://github.com/teejaymoo/HelloQuery-client)
 - [Deployed API](https://notion-api-626.herokuapp.com/)
 - [Deployed Client](https://teejaymoo.github.io/HelloQuery-client/#/)
 
