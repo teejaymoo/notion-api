@@ -2,13 +2,12 @@
 const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema({
-  reponse: {
+  response: {
     type: String
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
+    ref: 'User'
   }
 }, {
   timestamps: true
