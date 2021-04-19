@@ -1,10 +1,20 @@
 # Application
 
+Hello Query is a full stack web app using React.js to take users "questions" and log it is JSON format into our database. Hello Query will allow users to comment on each other questions as well.
+
+The notion API will be our backend that connects Hello query to our database.
+
 
 ## Important Links
+- [Other Repo](https://github.com/teejaymoo/HelloQuery-client)
+- [Deployed API](https://notion-api-626.herokuapp.com/)
+- [Deployed Client](https://teejaymoo.github.io/HelloQuery-client/#/)
 
 
 ## Planning Story
+
+Planning and Designing the Schemas for comments and queries.
+For future out of scope references: add Chatroom.
 
 
 ### User Stories
@@ -50,10 +60,10 @@ DELETE | /queries/:id
 
 ### Unsolved Problems
 
+Add Chatroom Schema.
 
 
-## Images
-
----
 
 #### Wireframe:
+
+![capstoneMain](https://i.imgur.com/IrFzWfJ.jpg)
