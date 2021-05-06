@@ -12,6 +12,7 @@ const requireOwnership = customErrors.requireOwnership
 // Create comment
 router.post('/queries/:id/comments', requireToken, (req, res, next) => {
   const commentData = req.body.comment
+  commentData.ownerName = req.user.username
   const queryId = req.params.id
   Query.findById(queryId)
     .populate('comments.owner')
@@ -37,7 +38,8 @@ router.get('/queries/:id/index-comments', (req, res, next) => {
     .catch(next)
 })
 
-router.patch('/queries/:id', requireToken, removeBlanks, (req, res, next) => {
+// UPDATE
+router.patch('/queries/:id/comments/:id2', requireToken, removeBlanks, (req, res, next) => {
   delete req.body.query.keeper
   Query.findById(req.params.id)
     .then(handle404)

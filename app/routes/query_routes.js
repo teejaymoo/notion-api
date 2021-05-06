@@ -24,6 +24,7 @@ router.post('/queries', requireToken, (req, res, next) => {
   console.log('The user object:', req.user)
   console.log('The incoming event data:', req.body)
   const queryData = req.body.query
+  queryData.keeperName = req.user.username
   queryData.keeper = req.user._id
 
   Query.create(queryData)

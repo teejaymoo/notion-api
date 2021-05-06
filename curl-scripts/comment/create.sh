@@ -6,7 +6,7 @@ curl "http://localhost:4741/queries/${ID}/comments" \
   --header "Content-Type: application/json" \
   --data '{
     "comment": {
-      "response": "'"${RESPONSE}"'"
+      "response": "'"${R}"'"
     }
   }'
 
